@@ -30,19 +30,12 @@ kanshi
 | [noctalia.desktop](./etc/skel/.config/autostart/noctalia.desktop) | UWSM managed XDG Autostart for Noctalia Shell |
 | - | - |
 
-1. `kanshi` is universal Wayland monitors and profiles managing daemon. It starts with `graphical-session.target` and belongs to `session.slice` group.
+1. `kanshi` is universal Wayland monitors and profiles managing daemon.
 2. `nocatalia` is Wayland widgets framework. Same as `kanshi`.
 
-XDG Autostart directive allows to create more streamlined Autostart entities without compositor config changing.
-UWSM introduces `slice` managment, UWSM slices  have 3 layers:
-
-1. `app-graphical.slice` - for regular GUI apps.
-2. `background-graphical.slice` -  for background daemons.
-3. `session-graphical.slice` - cruical for current session daemons/apps.
-
-... and custom slice.
-
 You can write your own `.desktop` file with lesser amount of lines, this files are references for "best case scenario".
+
+You can make their `systemd` service override in `.config/systemd/user/app-<name>@autostart.service.d/slice.conf`. We do not provide overrides for sake of compatability.
 
 ### Paths [`.config/gtk-3.0/`](./etc/skel/.config/gtk-3.0/) and [`.config/gtk-4.0/`](./etc/skel/.config/gtk-4.0/)
 

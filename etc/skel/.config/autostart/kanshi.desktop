@@ -10,4 +10,3 @@ StartupNotify=false
 Terminal=false
 Icon=display
 NoDisplay=true
-Slice=session-graphical.slice
